@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: starjedi;
+  src: url(../Fonts/Starjedi.ttf);
+}
+
+.fa {
+  padding: 18px;
+  font-size: 3em;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1.5px solid #d3c7b6;
+  margin: 2px;
+  float: right;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #0f4154;
+  color: #d3c7b6;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #0f4154;
+  color: #d3c7b6;
+  position: absolute;
+  top: 8px;
+  right: 58px;
+}
+
+/* Spotify */
+.fa-spotify {
+  background: #0f4154;
+  color: #d3c7b6;
+  position: absolute;
+  top: 8px;
+  right: 111px;
+}
+
+.fa-camera{
+  background: #0f4154;
+  color: #d3c7b6;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #101b2a;
+}
+
+/* Header/Blog Title */
+.header {
+ position: absolute;
+ top: 7.5%;
+ left: 5%;
+ color:#d3c7b6;
+}
+
+.header h1 {
+  font-size: 4.8em;
+  color:#d3c7b6;
+  font-family: starjedi;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  padding-right: 10px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 25%;
+  padding-left: 10px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #335685;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.subcard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subcard p{
+  padding-left: 4em;
+  white-space: normal;
+}
+
+.card p{
+  font-size: 1em;
+  color:#d3c7b6;
+  font-family: Verdana;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.background{
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.background img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Style the topnav links */
+.background a{
+  display: block;
+  color: #d3c7b6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.about{
+  position: absolute;
+  top: 8px;
+  left: 0px;
+}
+
+.band{
+  position: absolute;
+  top: 8px;
+  left: 90px;
+}
+
+.contact{
+  position: absolute;
+  top: 8px;
+  left: 155px;
+}
+
+.background p{
+  font-size: 1.1em;
+  font-family: Verdana;
+  color: #d3c7b6;
+  position: absolute;
+  top: 75%;
+  left: 12.5%;
+}
+
+h2{
+  font-family: Verdana;
+  color: #d3c7b6;
+}
+h3{
+  font-family: Verdana;
+  color: #d3c7b6;
+}
+h5{
+  font-family: Verdana;
+  color: #d3c7b6;
+}
+
+.plink{
+  font-family: Verdana;
+  color: #d3c7b6;
+  font-style: underline;
+}
+
+.credit a{
+  position: relative;
+  right: 2em;
+  top: -1.5em;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="background">
+    <div class="navlinks">
+      <a href="#card1" class="about"><b><u>About Me</u></b></a>
+      <a href="index2.html" class="band"><b><u>Bands</u></b></a>
+      <a href="index1.html" class="contact"><b><u>Contact Me</u></b></a>
+    </div>
+    <img src="../Photos/Mangorata-13.jpg" width="200%" height="auto">
+    <div class="socialnav">
+      <a href="https://www.instagram.com/james.absalom.23/" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=100009299892733" target="_blank" class="fa fa-facebook"></a>
+      <a href="https://open.spotify.com/artist/46lh1HLnfenaeClxtEWu90" target="_blank" class="fa fa-spotify"></a>
+    </div>
+    <div class="header">
+      <h1>James Absalom</h1>
+      <p><b>Tenor Saxophonist and musician based in Leeds</b></p>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 id="card1">About Me</h2>
+      <h5>James Absalom BA, Leeds Conservatoire</h5>
+      <div class="subcard">
+        <div id="abimg">
+          <img src="../Photos/Mangorata_on_film-13.1.jpg" width="200em" height="auto">
+        </div>
+        <p id="intro1">
+         James studied tenor saxophone at Leeds Conservatoire and achieved a BA Music degree with a first.
+         He has centered himself in the heart of the Leeds Jazz scene, playing in iconic venues such as:
+         <a href="https://www.selabar.com/" class="plink" title="Sela Bar" target="_blank">Sela Bar</a>, 
+         <a href="https://www.thedomino.co.uk/" class="plink" title="The Domino" target="_blank">The Domino</a> 
+         and <a href="http://www.brudenellsocialclub.co.uk/" class="plink" title="Brudenell Social Club" target="_blank">Brudenell Social Club</a>.
+         James is keen for any playing with his heart lying in the Jazz genre.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <h2 id="card2">TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Upcoming events: </h3>
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&showTz=0&showCalendars=0&showTabs=0&showPrint=0&mode=MONTH&title=James%20Absalom&src=amFtZXNhYnNhbG9tc2F4QGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="100%" style="padding: 0.5em;" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="card">
+      <div class="credit">
+        <p style="padding-right: 0.5em;">Photographer <a href="https://sophiejouvenaar.com/about" target="_blank" class="fa fa-camera"></a></p>
+      </div>
+    </div>
+    <div class="card">
+      <p>Website design and development done by his amazing girlfriend.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
