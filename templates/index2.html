@@ -3,347 +3,90 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-@font-face{
-  font-family: starjedi;
-  src: url(../Fonts/Starjedi.ttf);
+  body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-body {
-    font-family: Verdana;
-    background: #101b2a;
-    margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.fa {
-  padding: 1em;
-  font-size: 5em;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  border: 1.5px solid #d3c7b6;
-  margin: 2px;
-  float: right;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-home {
-  background: #0f4154;
-  color: #d3c7b6;
-  position: absolute;
-  top: 8px;
-  right: 5px;
-  font-size: 5em;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Facebook */
-.fa-facebook {
-  background: #0f4154;
-  color: #d3c7b6;
-  position: absolute;
-  top: 18%;
-  right: 5px;
-}
-
-/* Instagram */
-.fa-instagram {
-  background: #0f4154;
-  color: #d3c7b6;
-  position: absolute;
-  top: 18%;
-  right: 58px;
-}
-
-/* Spotify */
-.fa-spotify {
-  background: #0f4154;
-  color: #d3c7b6;
-  position: absolute;
-  top: 18%;
-  right: 111px;
-}
-
-img {
-  vertical-align: middle;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  top: 25%;
-  margin-left: 0.5em;
-  width: 50%;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev {
-  cursor: pointer;
-  position: absolute;
-  top: 27%;
-  width: auto;
-  padding: 0.25em;
-  color: #d3c7b6;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 27%;
-  padding: 0.25em;
-  left: 49%;
-  width: auto;
-  color: #d3c7b6;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #d3c7b6;;
-  font-size: 0.75em;
-  padding: 8px 12px;
-  position: absolute;
-  top: 90%;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #335685;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
   float: left;
-  width: 16.66%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
 }
 
-.active,
-.demo:hover {
-  opacity: 1;
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
 }
 
-h1 {
-  font-family: starjedi;
-  font-size: 2em;
-  color:#d3c7b6;
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
-
-h2 {
-  font-family: starjedi;
-  font-size: 1.5em;
-  color:#d3c7b6;
-  padding: 0.5em;
-}
-
-.MangoBio{
-  float: right;
-  color:#d3c7b6;
-  padding: 1em;
-  position:absolute;
-  margin-left: 60%;
-  top: 25%;
-}
-
-.RebelBio{
-  float: right;
-  color:#d3c7b6;
-  padding: 1em;
-  position:absolute;
-  margin-left: 60%;
-  top: 135%;
-}
-
-.TrioBio{
-  float: right;
-  color:#d3c7b6;
-  padding: 1em;
-}
-
-.rebel3{
-  padding: 1em;
-}
-
 </style>
 </head>
 <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <a href="index.html" class="fa fa-home"></a>
+  
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
 
-<h1 style="text-align:center">James's Wider Work</h1> <!-- TODO: come back and rename this-->
-<h2 style="text-align:left">Mangorata</h2>
-<div class="mangosocialnav">
-  <a href="https://www.instagram.com/mangorata.band/" target="_blank" class="fa fa-instagram"></a>
-  <a href="https://www.facebook.com/Mangorata" target="_blank" class="fa fa-facebook"></a>
-  <a href="https://open.spotify.com/artist/46lh1HLnfenaeClxtEWu90" target="_blank" class="fa fa-spotify"></a>
+<div class="tab">
+  <button class="tablinks" onclick="openBand(event, 'Mangorata')">Mangorata</button>
+  <button class="tablinks" onclick="openBand(event, 'RebelSounds')">Rebel Sounds</button>
+  <button class="tablinks" onclick="openBand(event, 'JamesAbsalomTrio')">James Absalom Trio</button>
 </div>
 
-
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="../Photos/Mango_Gallery/1Mangorata-20.jpg" style="width:100%" style="height:auto">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="../Photos/Mango_Gallery/2Mangorata_on_film-37.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="../Photos/Mango_Gallery/3Mangorata_(Digital)-04.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="../Photos/Mango_Gallery/4Mangorata_(Digital)-26.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="../Photos/Mango_Gallery/5MangoSummer22.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="../Photos/Mango_Gallery/6Mangorata_(Digital)-48.jpg" style="width:100%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/1Mangorata-20.jpg" style="width:100%" onclick="currentSlide(1)" alt="Mangorata at Brudenell">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/2Mangorata_on_film-37.jpg" style="width:100%" onclick="currentSlide(2)" alt="Mangorata">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/3Mangorata_(Digital)-04.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mangorata">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/4Mangorata_(Digital)-26.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mangorata">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/5MangoSummer22.jpg" style="width:100%" onclick="currentSlide(5)" alt="Mangorata at Writtle Jazz festival">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="../Photos/Mango_Gallery/6Mangorata_(Digital)-48.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mangorata">
-    </div>
-  </div>
-
-  <div class="MangoBio">
-    <p>Mangorata are a 6 piece Jazz Fusion band based in Leeds.</p>
-  </div>
-
+<div id="Mangorata" class="tabcontent">
+  <h3>Mangorata</h3>
+  <p>London is the capital city of England.</p>
 </div>
 
-<div class="container">
-  <h2 style="text-align:left">Rebel Sounds</h2>
-  <img id="rebel3" src="../Photos/rebel3.jpg" style="width:100%">
-
-  <div class="RebelBio">
-    <p>The rebel sounds are a wedding function band based in Leeds.</p>
-  </div>  
-
+<div id="RebelSounds" class="tabcontent">
+  <h3>Rebel Sounds</h3>
+  <p>Paris is the capital of France.</p> 
 </div>
 
-<div class="container">
-  <h2 style="text-align:left">James Absalom Trio</h2>
-  <div class="TrioBio">
-    <p>The James Absalom Trio are a newly formed trio with James as the front man.
-      The trio have played at Hyde Park Book club in January.<br>
-      Tenor Saxopone: James Absalom<br>
-      Bass: Chris Williams<br>
-      Drums: Dom Neeson<br>
-    </p>
-  </div> 
+<div id="JamesAbsalomTrio" class="tabcontent">
+  <h3>James Absalom Trio</h3>
+  <p>Tokyo is the capital of Japan.</p>
 </div>
 
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function openBand(evt, cityBandName) 
+{
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) 
+  {
+    tabcontent[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) 
+  {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  document.getElementById(cityBandName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-</script>
+</script>  
+
 </body>
 </html>
